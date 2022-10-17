@@ -20,8 +20,6 @@ public class MainService {
     public void showProductService(Model model){
         System.out.print("Hello 1");
         List<Shoes> shoes = (List<Shoes>) shoesRepository.findAll();
-        System.out.print("Hello 2");
-        System.out.println("Hello " + shoesRepository.findById(20).get());
         model.addAttribute("shoes", shoes);
     }
 
