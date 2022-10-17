@@ -25,7 +25,7 @@ public class MainController {
         service.showProductService(model);
         return "Index";
     }
-    @GetMapping("/Index")
+    @GetMapping("/index")
     public String indexPage() {
         return "redirect:/"; 
     }

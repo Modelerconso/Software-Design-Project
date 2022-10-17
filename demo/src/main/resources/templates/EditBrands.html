@@ -116,7 +116,7 @@ display: block;
                 <tr scope="row", th:each="brand : ${brands}">
                     <td th:text="${brand.id}"></td>
                     <td th:text="${brand.name}"></td> 
-                    <td><a class="btn btn-outline-danger" type="button"  th:href="@{/delete(deleteBrand=${brand.id})}">Delete</a></td>                   
+                    <td><a class="btn btn-outline-danger" type="button"  th:href="@{/delete-brand(deleteBrand=${brand.id})}">Delete</a></td>                   
                 </tr>
             
                 </tbody>
@@ -124,8 +124,8 @@ display: block;
         </div>
 
         <div class="button">
-            <input type="button" class="btn btn-outline-primary" onclick="location.href = '/addBrand'" value="Add"></input>
-            <input type="button" onclick="location.href = '/CreateShoes'" class="btn btn-outline-dark" value="Back"></input>
+            <input type="button" class="btn btn-outline-primary" onclick="location.href = '/create-brand'" value="Add"></input>
+            <input type="button" onclick="location.href = '/create-shoes'" class="btn btn-outline-dark" value="Back"></input>
         </div>
     </div>
 </body>

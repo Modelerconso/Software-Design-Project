@@ -97,7 +97,7 @@ h1{
         <h1>Update Stock</h1>
           <p>Update stock to database.</p>
 
-        <form id = "form1" action="#" th:action="@{/Edit/{id}(id=${shoe.id})}" method="post" th:object="${shoe}">
+        <form id = "form1" action="#" th:action="@{/update-shoes/{id}(id=${shoe.id})}" method="post" th:object="${shoe}">
 
             <div class="width: 50 mb-3">
                 <label for="Name" class="form-label"><b>Name:</b></label>
@@ -122,8 +122,8 @@ h1{
                 <input type="number" class="form-control" th:field="${shoe.price}"  min=0 autofocus="autofocus" maxlength="80" placeholder="Price" id="Price" required/>
             </div>
 
-            <input type="submit" class="btn btn-success mb-3" onclick="location.href = '/Index'" value="Update"></input>
-            <input type="button" class="btn btn-danger mb-3" onclick="location.href = '/Index'" value="Cancle" ></input>
+            <input type="submit" class="btn btn-success mb-3" onclick="location.href = '/index'" value="Update"></input>
+            <input type="button" class="btn btn-danger mb-3" onclick="location.href = '/index'" value="Cancle" ></input>
         </form>
     </div>
 </body>

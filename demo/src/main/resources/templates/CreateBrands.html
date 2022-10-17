@@ -97,7 +97,7 @@ h1{
         <h1>Create Brand</h1>
           <p>Add new brand to database.</p>
 
-        <form id = "form1" action="#" th:action="@{/addBrand}" method="post" th:object="${brand}">
+        <form id = "form1" action="#" th:action="@{/add-brand}" method="post" th:object="${brand}">
 
             <div class="width: 50 mb-3">
                 <label for="Name" class="form-label"><b>Name:</b></label>
@@ -106,7 +106,7 @@ h1{
 
             <button type="submit" class="btn btn-success mb-3" >Add</button>
             <button type="reset" class="btn btn-warning mb-3">Reset</button>
-            <input type="button" class="btn btn-danger mb-3" onclick="location.href = '/EditBrands'" value="Cancle" ></input>
+            <input type="button" class="btn btn-danger mb-3" onclick="location.href = '/edit-brands'" value="Cancle" ></input>
         </form>
     </div>
 </body>

@@ -17,12 +17,12 @@ public class ShoesController {
     }
 
     // Add
-    @PostMapping("/CreateShoes")
+    @PostMapping("/add-shoes")
     public String addShoes(@Validated Shoes shoes){
         service.addShoesServices(shoes);
         return "redirect:/";
     }
-    @GetMapping("/CreateShoes")
+    @GetMapping("/create-shoes")
     public String createShoes(Model model){
         service.createShoesServices(model);
         return "CreateShoes";
@@ -36,12 +36,12 @@ public class ShoesController {
     }
 
     // Update
-    @PostMapping("/Edit/{id}")
+    @PostMapping("/update-shoes/{id}")
     public String updateShoes(@Validated Shoes shoes){
         service.updateShoesService(shoes);
         return "redirect:/" ;
     }
-    @GetMapping("/Edit")
+    @GetMapping("/edit-shoes")
     public String editShoes(@RequestParam("EditProduct") Integer id, Model model) {
         service.editShoesService(id, model);
         return "EditShoes"; 

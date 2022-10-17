@@ -114,7 +114,7 @@ display: block;
                                 <td  th:text="${shoe.brand.name}"></td>
                                 <td  th:text="${shoe.amount}"></td>
                                 <td  th:text="${shoe.price}"></td>
-                                <td><a class="btn btn-outline-danger" type="button"  th:href="@{/Edit(EditProduct=${shoe.id})}">Edit</a></td>
+                                <td><a class="btn btn-outline-danger" type="button"  th:href="@{/edit-shoes(EditProduct=${shoe.id})}">Edit</a></td>
                                 <td><a class="btn btn-outline-danger" type="button"  th:href="@{/delete-shoes(deleteShoes=${shoe.id})}">Delete</a></td>  
                         </tr>
                         </tbody>   
@@ -124,7 +124,7 @@ display: block;
 
             <div class="text-xl-center">
                 <input type="button" class="btn btn-outline-primary" onclick= "location.href = '/search'" id="search_button" value="Search"></input>
-                <input type="button" class="btn btn-outline-success" onclick = "location.href = '/CreateShoes' " id="create_button" value="Create"></input>
+                <input type="button" class="btn btn-outline-success" onclick = "location.href = '/create-shoes' " id="create_button" value="Create"></input>
             </div>
 
         </div>

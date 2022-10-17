@@ -17,26 +17,26 @@ public class BrandsController {
     }
 
     // add
-    @PostMapping("/addBrand")
+    @PostMapping("/add-brand")
     public String addBrand(@Validated Brands brand){
         service.addBrandsService(brand);
-        return "redirect:/EditBrands";
+        return "redirect:/edit-brands";
     }
-    @GetMapping("/addBrand")
+    @GetMapping("/create-brand")
     public String createBrand(Model model){
         service.createBrandsService(model);
         return "CreateBrands";
     }
     
     // delete
-    @GetMapping("/delete")
+    @GetMapping("/delete-brand")
     public String deleteBrand(@RequestParam("deleteBrand") Integer id) {
         service.deleteBrandsService(id);
-        return "redirect:/EditBrands";
+        return "redirect:/edit-brands";
     }
 
     // Edit
-    @GetMapping("/EditBrands")
+    @GetMapping("/edit-brands")
     public String editBrands(Model model) {
         service.editBrandsService(model);
         return "EditBrands";

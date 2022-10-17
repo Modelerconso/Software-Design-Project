@@ -97,7 +97,7 @@ h1{
         <h1>Create Stock</h1>
           <p>Add new stock to database.</p>
 
-        <form id = "form1" action="#" th:action="@{/CreateShoes}" method="post" th:object="${shoes}">
+        <form id = "form1" action="#" th:action="@{/add-shoes}" method="post" th:object="${shoes}">
 
             <div class="width: 50 mb-3">
                 <label for="Name" class="form-label"><b>Name:</b></label>
@@ -113,7 +113,7 @@ h1{
                 <!--<span th:if="${#fields.hasErrors('Brands')}" th:errors="*{}"></span>-->
                 
             </div>
-            <button type="button" class="btn btn-secondary" onclick="location.href = '/EditBrands'" value="Cancle">Edit Brands</button>
+            <button type="button" class="btn btn-secondary" onclick="location.href = '/edit-brands'" value="Cancle">Edit Brands</button>
 
             <div class="width: 50 mb-3">
                 <label for="Quantity" class="form-label"><b>Quantity:</b></label>
@@ -127,7 +127,7 @@ h1{
 
             <button type="submit" class="btn btn-success mb-3" >Add</button>
             <button type="reset" class="btn btn-warning mb-3">Reset</button>
-            <input type="button" class="btn btn-danger mb-3" onclick="location.href = '/Index'" value="Cancle" ></input>
+            <input type="button" class="btn btn-danger mb-3" onclick="location.href = '/index'" value="Cancle" ></input>
         </form>
     </div>
 </body>
