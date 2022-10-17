@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        body{
+    background-image: linear-gradient(to right top, #d16ba5,
+     #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec,
+      #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa,
+       #5ffbf1) ;
+    background-attachment: fixed;
+}
+
+.articles{
+    width: 90%; /*Takes 90% width from WebContainer*/
+    height: auto;
+    margin: auto;
+}
+
+h1{
+    text-align: center;  
+}
+
+.main {
+    width: 1000px;
+    height: 750px;
+    margin: auto;
+    margin-top: 40px;
+    background-color:rgb(255, 255, 255);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 1rem;
+    
+}
+
+@media screen and (max-width: 992px){
+.main {
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    margin-top: 10%;
+    background-color:rgb(255, 255, 255);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 1rem;
+    
+}
+}
+
+@media screen and (max-width: 600px){
+.main {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    margin-top: 10%;
+    background-color:rgb(255, 255, 255);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding: 1rem;
+}
+}
+
+.table          { overflow: auto; height: 100px; }
+.table thead th { position: sticky; top: 0; z-index: 1;background-color: rgb(255, 255, 255); }
+table  { border-collapse: collapse; width: 100%; }
+th, td { padding: 8px 16px; }
+
+.my-custom-scrollbar {
+position: relative;
+height: 500px;
+overflow: auto;
+}
+.table-wrapper-scroll-y {
+display: block;
+}
+
+      </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="stylesCreateBrands.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Add Brands</title>
+</head>
+<body>
+    <div class="main">
+        <div class="head-edit">
+            <h1>Edit Brands</h1>
+        </div>
+
+            <div class="table-wrapper-scroll-y my-custom-scrollbar">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">id_brands</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr scope="row", th:each="brand : ${brands}">
+                    <td th:text="${brand.id}"></td>
+                    <td th:text="${brand.name}"></td> 
+                    <td><a class="btn btn-outline-danger" type="button"  th:href="@{/delete(deleteBrand=${brand.id})}">Delete</a></td>                   
+                </tr>
+            
+                </tbody>
+            </table>
+        </div>
+
+        <div class="button">
+            <input type="button" class="btn btn-outline-primary" onclick="location.href = '/addBrand'" value="Add"></input>
+            <input type="button" onclick="location.href = '/CreateShoes'" class="btn btn-outline-dark" value="Back"></input>
+        </div>
+    </div>
+</body>
+</html>
